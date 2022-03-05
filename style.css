@@ -57,7 +57,3 @@ button:hover {
     flex-grow: 1;
     background-color: white;
 }
-
-.grid-item-active {
-    background-color: black;
-}
