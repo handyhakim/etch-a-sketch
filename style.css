@@ -4,20 +4,18 @@
     flex-wrap: wrap;
     height: 34em;
     width: 34em;
-    align-content: center;
+    justify-content: space-evenly;
 }
 
 .grid-item {
-    border: 0.1em solid;
+    outline: 0.1em solid;
     margin: 0;
-    height: 2em;
-    width: 2em;
+    width: 0;
+    height: 0;
+    flex-grow: 1;
+    background-color: white;
 }
 
 .grid-item-active {
-    border: 0.1em solid;
-    margin: 0;
-    height: 2em;
-    width: 2em;
     background-color: black;
 }

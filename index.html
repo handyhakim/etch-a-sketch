@@ -12,10 +12,20 @@
     </div>
 
     <script>
-        for (i = 0; i <= 255; i++) {
+        let boardSize = 16;
+
+        let boardCalc = () => {
+            return boardSize * boardSize;
+        }
+
+        let sizeHW = 34 / boardSize + 'em';
+
+        for (i = 0; i < boardCalc(); i++) {
             const grid = document.createElement('div');
             grid.classList.add('grid-item');
             grid.setAttribute('id', i);
+            grid.style.width = sizeHW;
+            grid.style.height = sizeHW;
             document.querySelector('.grid-container').appendChild(grid);
         }
 
