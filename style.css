@@ -1,5 +1,24 @@
+body {
+    background-color: #F5F5F5;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    border-radius: 0px;
+    background: #ffffff;
+    box-shadow:  3px 3px 7px #d9d9d9,
+                -3px -3px 7px #ffffff;
+}
+
+button:hover {
+    background: #d9d9d9;
+}
+
 .heading {
     padding-left: 2em;
+    padding-top: 0.4em;
+    margin-bottom: -0.5em;
 }
 
 .container {
@@ -9,22 +28,24 @@
 .menu-container {
     padding-left: 2em;
     padding-right: 2em;
-    padding-top: 2em;
-    background-color: azure;
+    padding-top: 4em;
 }
 
 .grid-container {
-    padding-left: 2em;
-    padding-right: 2em;
+    margin: 2em;
     display: flex;
     flex-wrap: wrap;
-    height: 34em;
-    width: 34em;
+    height: 30em;
+    width: 30em;
     justify-content: space-evenly;
+
+    border-radius: 0px;
+    background: #ffffff;
+    box-shadow:  35px 35px 70px #d9d9d9,
+                -35px -35px 70px #ffffff;
 }
 
 .grid-item {
-    outline: 0.1em solid;
     margin: 0;
     width: 0;
     height: 0;

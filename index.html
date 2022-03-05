@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="heading">
-        <h2>Etch-a-Sketch</h2>
+        <h1>Etch-a-Sketch</h1>
     </div>
     <div class="container">
         <div class="menu-container">
@@ -27,7 +27,7 @@
 
         let initialSize = () => {
             boardSize = 10;
-            sizeHW = 34 / boardSize + 'em';
+            sizeHW = 30 / boardSize + 'em';
         }
 
         initialSize();
@@ -56,7 +56,7 @@
             if (boardSize > 100) {
                 boardSize = parseInt(prompt('Maximum grids allowed is 100. Enter new grids size : '));
             };
-            sizeHW = 34 / boardSize + 'em';
+            sizeHW = 30 / boardSize + 'em';
             start();
         };
 
