@@ -1,3 +1,11 @@
+.container {
+    display: flex;
+}
+
+.menu-container {
+    padding: 3em;
+}
+
 .grid-container {
     border: 0.1em solid;
     display: flex;

@@ -8,33 +8,67 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="grid-container">
+    <div class="container">
+        <div class="menu-container">
+            <button type="button" onclick="removeElements(document.querySelectorAll('.grid-item'));">Clear</button>
+        </div>
+
+        <div class="grid-container">
+        </div>
+
     </div>
 
     <script>
-        let boardSize = 16;
+        let boardSize;
+        let sizeHW;
+
+        let initialSize = () => {
+            boardSize = 10;
+            sizeHW = 34 / boardSize + 'em';
+        }
+
+        initialSize();
 
         let boardCalc = () => {
             return boardSize * boardSize;
         }
 
-        let sizeHW = 34 / boardSize + 'em';
-
-        for (i = 0; i < boardCalc(); i++) {
-            const grid = document.createElement('div');
-            grid.classList.add('grid-item');
-            grid.setAttribute('id', i);
-            grid.style.width = sizeHW;
-            grid.style.height = sizeHW;
-            document.querySelector('.grid-container').appendChild(grid);
-        }
-
-        const elements = document.getElementsByClassName('grid-item');
-        for (i = 0; i < elements.length; i++) {
-            elements[i].onmouseover = function() {
-                this.classList.add('grid-item-active');
+        let createGrid = () => {
+            for (i = 0; i < boardCalc(); i++) {
+                const grid = document.createElement('div');
+                grid.classList.add('grid-item');
+                grid.setAttribute('id', i);
+                grid.style.width = sizeHW;
+                grid.style.height = sizeHW;
+                document.querySelector('.grid-container').appendChild(grid);
             };
+        };
+
+        function removeElements(elements){
+            for(i = 0; i < elements.length; i++){
+                elements[i].parentNode.removeChild(elements[i]);
+            }
+
+            boardSize = parseInt(prompt('Enter new grid size : '));
+            sizeHW = 34 / boardSize + 'em';
+            start();
+        };
+
+        let hoverEffect = () => {
+            const elements = document.getElementsByClassName('grid-item');
+            for (i = 0; i < elements.length; i++) {
+                elements[i].onmouseover = function() {
+                    this.classList.add('grid-item-active');
+                };
+            }
+        };
+
+        let start = () => {
+            createGrid();
+            hoverEffect();
         }
+
+        start();
     </script>
 </body>
 </html>
