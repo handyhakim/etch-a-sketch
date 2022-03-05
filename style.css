@@ -1,13 +1,21 @@
+.heading {
+    padding-left: 2em;
+}
+
 .container {
     display: flex;
 }
 
 .menu-container {
-    padding: 3em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 2em;
+    background-color: azure;
 }
 
 .grid-container {
-    border: 0.1em solid;
+    padding-left: 2em;
+    padding-right: 2em;
     display: flex;
     flex-wrap: wrap;
     height: 34em;
