@@ -1,0 +1,23 @@
+.grid-container {
+    border: 0.1em solid;
+    display: flex;
+    flex-wrap: wrap;
+    height: 34em;
+    width: 34em;
+    align-content: center;
+}
+
+.grid-item {
+    border: 0.1em solid;
+    margin: 0;
+    height: 2em;
+    width: 2em;
+}
+
+.grid-item-active {
+    border: 0.1em solid;
+    margin: 0;
+    height: 2em;
+    width: 2em;
+    background-color: black;
+}

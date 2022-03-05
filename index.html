@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-container">
+    </div>
+
+    <script>
+        for (i = 0; i <= 255; i++) {
+            const grid = document.createElement('div');
+            grid.classList.add('grid-item');
+            grid.setAttribute('id', i);
+            document.querySelector('.grid-container').appendChild(grid);
+        }
+
+        const elements = document.getElementsByClassName('grid-item');
+        for (i = 0; i < elements.length; i++) {
+            elements[i].onmouseover = function() {
+                this.classList.add('grid-item-active');
+            };
+        }
+    </script>
+</body>
+</html>
